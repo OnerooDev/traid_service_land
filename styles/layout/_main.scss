@@ -2,10 +2,11 @@ html {
     font-family: $font_family;
     background: color(main);
 }
+* {
+    margin: 0;
+    padding: 0;
+}
 .hero {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100vw;
     height: 100vh;
     background: url('/imgs/hero_back.png');
@@ -15,6 +16,11 @@ html {
     .logo {
         max-height: 10vh;
     }
+}
+.about {
+    position: sticky;
+    height: 50vh;
+    background-color: color(dark_main);
 }
 .container {
     padding-left: 10%;

@@ -17,6 +17,11 @@ export default function Home() {
             <p>Hi</p>
           </div>
         </div>
+        <div className='about'>
+          <div className="container">
+            <p>Hi</p>
+          </div>
+        </div>
     </>
   )
 }
