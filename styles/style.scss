@@ -1,0 +1,6 @@
+// @import "../node_modules/bootstrap/scss/bootstrap";
+// @import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+@import "abstracts/variables",
+        "abstracts/functions",
+        "abstracts/include-media";
+@import "layout/main";

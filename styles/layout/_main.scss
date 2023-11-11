@@ -1,0 +1,28 @@
+html {
+    font-family: $font_family;
+    background: color(main);
+}
+.hero {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('/imgs/hero_back.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:contain;
+    .logo {
+        max-height: 10vh;
+    }
+}
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+    max-width: 1440px;
+    background-position: center;
+}
+.logo {
+    min-height: 20vh;
+}
