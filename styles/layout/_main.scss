@@ -16,13 +16,25 @@ html {
     .logo {
         max-height: 10vh;
     }
+    button {
+        background-color: color(dark);
+        color: color(white);
+        padding:1vh;
+        border-radius: 10px;
+        &:hover {
+            color: color(dark);
+            background-color: color(secondary);
+            cursor: pointer;
+        }
+    }
 }
 .about {
     position: sticky;
-    height: 50vh;
+    height: 100vh;
     background-color: color(dark_main);
 }
 .container {
+    padding-top: 1%;
     padding-left: 10%;
     padding-right: 10%;
     width: 80%;
@@ -31,4 +43,49 @@ html {
 }
 .logo {
     min-height: 20vh;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    padding-left: 5%;
+    gap: 8%;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.1vh;
+    font-family: "Comfortaa";
+    color: color(white);
+}
+.centered {
+    text-align: center;
+    justify-content: center;
+}
+.padding_content {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    align-items: end;
+}
+.foil_roll {
+    height: 45vh;
+}
+.head {
+    .header {
+        color: color(white);
+        font-style: bold;
+        font-size: 4vh;
+    }
+    .description {
+        padding-top: 1vh;
+        color: color(gray);
+        margin-bottom: 5vh;
+    }
+}
+.headders {
+    color: white;
+    font-size: 3.1vh;
+    padding-top: 2vh;
 }
