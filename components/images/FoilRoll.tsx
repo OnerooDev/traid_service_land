@@ -8,8 +8,8 @@ interface FoilRollProps {
 export const FoilRoll: FC <FoilRollProps> = ({}) => {
 return (
 <svg className="foil_roll" viewBox="0 0 426 411" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_65_4244)">
-<g clip-path="url(#clip1_65_4244)">
+<g clipPath="url(#clip0_65_4244)">
+<g clipPath="url(#clip1_65_4244)">
 <mask id="mask0_65_4244" maskUnits="userSpaceOnUse" x="116" y="99" width="224" height="295">
 <path d="M116.614 360.727L252.113 99.3457C260.756 103.939 282.122 116.192 306.361 136.778C314.482 143.674 323.526 149.362 332.48 154.003C334.945 155.281 337.402 156.479 339.833 157.602L240.102 362.125L227.604 378.684C216.256 393.718 194.918 397.945 177.405 388.866C176.684 388.492 175.969 388.096 175.262 387.677C173.8 386.81 172.284 385.966 170.719 385.154C169.623 384.586 168.504 384.034 167.358 383.502C152.56 376.614 130.107 366.666 116.614 360.727Z" fill="white"/>
 </mask>

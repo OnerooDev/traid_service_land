@@ -1,6 +1,7 @@
 html {
     font-family: $font_family;
     background: color(main);
+    max-width: 100vw;
 }
 * {
     margin: 0;
@@ -12,7 +13,7 @@ html {
     background: url('/imgs/hero_back.png');
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     .logo {
         max-height: 10vh;
     }
@@ -30,11 +31,46 @@ html {
 }
 .about {
     position: sticky;
-    height: 100vh;
+    min-height: 70vh;
     background-color: color(dark_main);
+    .about_box {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        display: flex;
+        gap: 2vh;
+        justify-content: space-around;
+        .big_beam {
+            padding-top: 25vh;
+            max-height: 35vh;
+        }
+        .info_block {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-align: center;
+            align-items: center;
+            img {
+                border-radius: 10px;
+                max-width: 35vw;
+            }
+            .head {
+                padding-top: 12vh;
+                color: color(white);
+                font-size: 2.1vh;
+            }
+            .desc {
+                font-size: 1.8vh;
+                max-width: 35vw;
+                padding-top: 1.4vh;
+                padding-bottom: 9vh;
+                color: color(gray);
+            }
+        }    
+    }
 }
 .container {
-    padding-top: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     padding-left: 10%;
     padding-right: 10%;
     width: 80%;
@@ -43,6 +79,10 @@ html {
 }
 .logo {
     min-height: 20vh;
+    transition: all 1.5s;
+    &:hover {
+        min-height: 22vh;
+    }
 }
 .flex {
     display: flex;
@@ -58,7 +98,14 @@ html {
     align-items: center;
     font-size: 2.1vh;
     font-family: "Comfortaa";
-    color: color(white);
+    a {
+        color: color(white);
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            color: color(dark);
+        }
+        }
 }
 .centered {
     text-align: center;
@@ -79,13 +126,38 @@ html {
         font-size: 4vh;
     }
     .description {
-        padding-top: 1vh;
+        padding-top: 2vh;
         color: color(gray);
         margin-bottom: 5vh;
     }
 }
-.headders {
-    color: white;
-    font-size: 3.1vh;
-    padding-top: 2vh;
+
+@include media ('<=tablet') {
+    .menu {
+        flex-direction: column;
+        gap: 1vh
+    }
+    .about {
+        .about_box {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .big_beam {
+                padding-top: 0;
+                transform: rotate(45deg);
+                max-height: 17vh;
+            }
+            .info_block {
+                img {
+                    max-width: 65vw;
+                }
+                .head {
+                    padding-top: 4vh;
+                }
+                .desc {
+                    padding-bottom: 4vh;
+                } 
+            }
+        }
+    }
 }
