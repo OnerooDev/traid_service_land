@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Logo } from '../components/images/Logo';
-import { FoilRoll } from '../components/images/FoilRoll';
-import { BigBeam } from '../components/images/BigBeam';
-import { MetallBars } from '../components/images/MetallBars';
-import { ControlPanel } from '../components/images/ControlPanel';
-import { Frezer } from '../components/images/Frezer';
+import { useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import { Logo, FoilRoll, BigBeam, MetallBars, ControlPanel, Frezer, HelpGirl, LogoGreen } from '../components/images';
 
 export default function Home() {
+
+  const [email, setEmail] = useState('')
+  const handleChange = (event: any) => setEmail(event.target.value)
+
   return (
     <>
       <Head>
@@ -23,7 +23,7 @@ export default function Home() {
               <div className='menu'>
                 <a className='menu_a' href='#products'>Продукция</a>
                 <a className='menu_a' href='#about'>О нас</a>
-                <a className='menu_a' href='#contact'>Обратная cвязь</a>
+                <a className='menu_a' href='#footer'>Обратная cвязь</a>
               </div>
             </div>
             <div className="flex padding_content">
@@ -32,7 +32,7 @@ export default function Home() {
                 <p className='description padding'>Поставщик высококачественного металлопроката</p>
                 <br />
                 <br />
-                <a className='hero_a'>Спектр услуг</a>
+                <a className='hero_a' href='#products'>Спектр услуг</a>
               </div>
               <FoilRoll />
             </div>
@@ -60,7 +60,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='services'>
+        <div className='services' id='products'>
           <div className="container">
             <div className='head'>
               <p className='header'>Спектр услуг</p>
@@ -89,6 +89,29 @@ export default function Home() {
                 <p className='desc'>- Корпусная и узловая сборка электронных устройств</p>
               </div>
             </div>
+          </div>
+          {email}
+        </div>
+        <div className='footer' id="footer">
+          <div className='form_block'>
+            <div className='form_line'>
+              <HelpGirl />
+              <div className='form_box'>
+                <p className='quest'>ИНТЕРЕСЕН ТОВАР ИЛИ ХОТИТЕ УЗНАТЬ ПОДРОБНЕЕ?</p>
+                <p className='form_head'>ОСТАВЬТЕ ЗАЯВКУ</p>
+                <input className='input_field' type="text" id="email" name="email" placeholder={'Ввелите ваш Email или Номер'} onChange={handleChange} />
+                <div className='form_button' onClick={() => null}>Подтвердить</div>
+                <p className='description'>Наш сотрудник свяжется с вами в ближайшие 15 минут</p>
+              </div>
+            </div>
+          </div>
+          <div className='info_block'>
+              <LogoGreen />
+              <p className='copyright'>© 2023 Все права защищены</p>
+              <a className='social_media' href='https://t.me/'>Соц.сети</a>
+          </div>
+          <div className='sign_block'>
+              <a className='sign' href='https://t.me/oneroodev'>by OnerooDev</a>
           </div>
         </div>
     </>

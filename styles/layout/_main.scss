@@ -1,11 +1,13 @@
 html {
     font-family: $font_family;
-    background: color(main);;
+    background: color(main);
 }
 * {
     margin: 0;
     padding: 0;
 }
+//Page blocks
+//Hero_list
 .hero {
     width: 100vw;
     height: 100vh;
@@ -14,8 +16,32 @@ html {
     background-repeat: no-repeat;
     background-size: contain;
     .logo {
-        max-height: 10vh;
+        height: 17.5vh;
+        transition: height 0.8s;
+        &:hover {
+            height: 18.5vh;
+        }
     }
+    .menu {
+        display: flex;
+        padding-left: 5%;
+        gap: 8%;
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 2.1vh;
+        text-align: center;
+        font-family: "Comfortaa";
+        .menu_a {
+            color: color(white);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.8s;
+            &:hover {
+                color: color(dark);
+            }
+            }
+    }    
     .hero_a {
         font-style: bold;
         font-size: 1.9vh;
@@ -24,6 +50,7 @@ html {
         padding: 1vh;
         border-radius: 10px;
         transition: all 0.8s;
+        text-decoration: none;
         &:hover {
             color: color(dark);
             background-color: color(secondary);
@@ -31,6 +58,8 @@ html {
         }
     }
 }
+//
+//About list
 .about {
     position: sticky;
     min-height: 70vh;
@@ -72,10 +101,12 @@ html {
         }    
     }
 }
+//Services list
 .services {
     position: sticky;
     min-height: 70vh;
     background-color: color(dark);
+    padding-bottom: 3vh;
     .head {
         .header {
             padding-top: 1.5vh;
@@ -95,6 +126,7 @@ html {
         justify-content: space-between;
         gap: 1vw;
         .service_block {
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
             padding-top: 1vh;
@@ -122,6 +154,128 @@ html {
         }    
     }
 }
+//
+//Footer
+.footer {
+    background-color: color(black);
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+    .form_block {
+        align-self: end;
+        padding-right: 5%;
+        padding-bottom: 1vh;
+        .form_line{
+            display: flex;
+            gap: 2vh;
+            align-items: start;
+            .help_girl {
+                height: 35vh;
+                align-self: center;
+            }
+            .form_box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                .quest {
+                    color: color(gray);
+                    padding-top: 5vh;
+                    padding-bottom: 3vh;
+                    font-size: 1.8vh;
+                }
+                .form_head {
+                    color: color(white);
+                    font-style: bold;
+                    font-size: 4vh;
+                    padding-bottom: 3vh;
+                }
+                .input_field {
+                    color: color(back_gray);
+                    align-self: center;
+                    text-align: center;
+                    width: 80%;
+                    border: 1px color(main) solid;
+                    border-radius: 10px;
+                    padding-top: 1.5%;
+                    padding-bottom: 1.5%;
+                    font-size: 1.8vh;
+                    transition: all 0.3s linear;
+                    &:focus {
+                        color: color(black);
+                        outline: none;
+                        border: 2px color(main) solid;
+                    }
+                }
+                .form_button {
+                    margin-top: 2vh;
+                    align-self: center;
+                    width: 80%;
+                    border-radius: 10px;
+                    border: 1px color(white) solid;
+                    background: color(dark_main);
+                    font-size: 1.8vh;
+                    text-align: center;
+                    font-style: bold;
+                    padding-top: 1.5%;
+                    padding-bottom: 1.5%;
+                    cursor: pointer;
+                    color: color(white);
+                    transition: all 0.8s;
+                    &:hover {
+                        border: 1px color(black) solid;
+                        color: color(black);
+                        background: color(main);
+                    }
+                }
+                .description {
+                    padding-top: 2vh;
+                    font-size: 1.4vh;
+                    color: color(gray);
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .info_block {
+        padding-right: 5%;
+        padding-left: 5%;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+        .logo {
+            height: 14vh;
+        }
+        .copyright {
+            align-items: end;
+            color: color(white);
+            font-size: 1.5vh;
+        }
+        .social_media {
+            display: flex;
+            justify-content: space-between;
+            color: color(gray);
+            text-decoration: none;
+            font-size: 1.5vh;
+
+        }
+    }
+    .sign_block{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 3%;
+        .sign {
+            color: color(gray);
+            font-size: 0.95vh;
+            text-decoration: none;
+        }
+    }
+}
+//
+//
+
+//Mains
 .container {
     padding-top: 2%;
     padding-bottom: 2%;
@@ -129,37 +283,13 @@ html {
     padding-right: 10%;
     background-position: center;
 }
-.logo {
-    min-height: 20vh;
-    transition: min-height 0.8s;
-    &:hover {
-        min-height: 21vh;
-    }
-}
+//
+
+//Helpers
 .flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.menu {
-    display: flex;
-    padding-left: 5%;
-    gap: 8%;
-    width: 50%;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 2.1vh;
-    text-align: center;
-    font-family: "Comfortaa";
-    .menu_a {
-        color: color(white);
-        cursor: pointer;
-        text-decoration: none;
-        transition: color 0.8s;
-        &:hover {
-            color: color(dark);
-        }
-        }
 }
 .centered {
     text-align: center;
@@ -186,7 +316,9 @@ html {
         font-size: 1.8vh;
     }
 }
+//
 
+//Adoptation
 @include media ('<=tablet') {
     .menu {
         flex-direction: column;
@@ -227,4 +359,12 @@ html {
             }
         }
     }
+    .footer {
+        .form_block {
+            align-self: center;
+            .form_line {
+                flex-direction: column;
+            }
+        }
+    }    
 }
