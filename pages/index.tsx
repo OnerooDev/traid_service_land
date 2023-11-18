@@ -90,7 +90,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {email}
         </div>
         <div className='footer' id="footer">
           <div className='form_block'>
