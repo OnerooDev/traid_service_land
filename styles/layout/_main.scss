@@ -251,6 +251,7 @@ html {
             align-items: flex-end;
             color: color(white);
             font-size: 1.5vh;
+            text-align: center;
         }
         .social_media {
             display: flex;
@@ -264,6 +265,7 @@ html {
     .sign_block{
         display: flex;
         justify-content: flex-end;
+        padding-top: 1%;
         padding-right: 3%;
         .sign {
             color: color(gray);
@@ -320,9 +322,11 @@ html {
 
 //Adoptation
 @include media ('<=tablet') {
-    .menu {
-        flex-direction: column;
-        gap: 1vh
+    .hero {
+        .menu {
+            flex-direction: column;
+            gap: 1.5vh;
+        }
     }
     .about {
         .about_box {
@@ -366,5 +370,10 @@ html {
                 flex-direction: column;
             }
         }
+        .info_block {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }    
     }    
 }

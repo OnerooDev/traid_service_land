@@ -1,12 +1,8 @@
-import { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import { Logo, FoilRoll, BigBeam, MetallBars, ControlPanel, Frezer, HelpGirl, LogoGreen } from '../components/images';
-
+import {Form} from '../components/Form';
+ 
 export default function Home() {
-
-  const [email, setEmail] = useState('')
-  const handleChange = (event: any) => setEmail(event.target.value)
 
   return (
     <>
@@ -95,13 +91,7 @@ export default function Home() {
           <div className='form_block'>
             <div className='form_line'>
               <HelpGirl />
-              <div className='form_box'>
-                <p className='quest'>ИНТЕРЕСЕН ТОВАР ИЛИ ХОТИТЕ УЗНАТЬ ПОДРОБНЕЕ?</p>
-                <p className='form_head'>ОСТАВЬТЕ ЗАЯВКУ</p>
-                <input className='input_field' type="text" id="email" name="email" placeholder={'Ввелите ваш Email или Номер'} onChange={handleChange} />
-                <div className='form_button' onClick={() => null}>Подтвердить</div>
-                <p className='description'>Наш сотрудник свяжется с вами в ближайшие 15 минут</p>
-              </div>
+              <Form />
             </div>
           </div>
           <div className='info_block'>
@@ -110,7 +100,7 @@ export default function Home() {
               <a className='social_media' href='https://t.me/'>Соц.сети</a>
           </div>
           <div className='sign_block'>
-              <a className='sign' href='https://t.me/oneroodev'>by OnerooDev</a>
+              <a className='sign' href='https://t.me/oneroodev'>Page by OnerooDev</a>
           </div>
         </div>
     </>
