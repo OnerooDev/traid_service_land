@@ -168,8 +168,24 @@ html {
         padding-bottom: 1vh;
         .form_line{
             display: flex;
-            gap: 2vh;
-            align-items: flex-start;
+            gap: 5vh;
+            align-items: center;
+            .contacts {
+                display: flex;
+                flex-direction: column;
+                color: color(white);
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                .he {
+                    font-style: bold;
+                    font-size: 3vh;
+                    padding-bottom: 3vh;
+                }
+                .text {
+                    font-size: 1.8vh;
+                }
+            }
             .help_girl {
                 height: 35vh;
                 align-self: center;
@@ -266,7 +282,7 @@ html {
         display: flex;
         justify-content: flex-end;
         padding-top: 1%;
-        padding-right: 3%;
+        padding-right: 2%;
         .sign {
             color: color(gray);
             font-size: 0.95vh;
@@ -283,7 +299,6 @@ html {
     padding-bottom: 2%;
     padding-left: 10%;
     padding-right: 10%;
-    background-position: center;
 }
 //
 
@@ -303,7 +318,7 @@ html {
     align-items: flex-end;
 }
 .foil_roll {
-    height: 45vh;
+    max-height: 45vh;
 }
 .head {
     .header {
@@ -340,7 +355,7 @@ html {
             }
             .info_block {
                 img {
-                    max-width: 65vw;
+                    max-width: 60vw;
                 }
                 .head {
                     padding-top: 4vh;
@@ -366,6 +381,7 @@ html {
     .footer {
         .form_block {
             align-self: center;
+            padding-right: 0;
             .form_line {
                 flex-direction: column;
             }

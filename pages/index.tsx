@@ -90,6 +90,10 @@ export default function Home() {
         <div className='footer' id="footer">
           <div className='form_block'>
             <div className='form_line'>
+              <div className='contacts'>
+                <p className='he'>Контакты</p>
+                <p className='text'>+7 (495) 748-96-88</p>
+              </div>
               <HelpGirl />
               <Form />
             </div>
