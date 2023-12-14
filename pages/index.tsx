@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Logo, FoilRoll, BigBeam, MetallBars, ControlPanel, Frezer, HelpGirl, LogoGreen } from '../components/images';
+import { Logo, FoilRoll, MetallBars, ControlPanel, Frezer, HelpGirl, LogoGreen } from '../components/images';
 import {Form} from '../components/Form';
  
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Head>
         <title>Traid Service</title>
-        <meta name="description" content="Traid Service - Надёжный поставщик метала" />
+        <meta name="description" content="Traid Service - Комплексный поставщик металла и электронной компонентной базы" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -17,41 +17,17 @@ export default function Home() {
             <div className="flex">
               <Logo />
               <div className='menu'>
-                <a className='menu_a' href='#products'>Продукция</a>
-                <a className='menu_a' href='#about'>О нас</a>
-                <a className='menu_a' href='#footer'>Обратная cвязь</a>
+                <p className='menu_a'>E-mail: info@traidservice.ru</p>
+                <p className='menu_a'>Тел: +7 (926) 058-06-17 (Telegram, WhatsApp)</p>
               </div>
-            </div>
-            <div className="flex padding_content">
-              <div className='head'>
-                <p className='header padding'>Все виды металла в одном месте</p>
-                <p className='description padding'>Поставщик высококачественного металлопроката</p>
-                <br />
-                <br />
-                <a className='hero_a' href='#products'>Спектр услуг</a>
-              </div>
-              <FoilRoll />
-            </div>
-          </div>
-        </div>
-        <div className='about' id='about'>
-          <div className="container">
-            <div className='head centered'>
-              <p className='header'>О нашей компании</p>
-              <p className='description'>Качество - наш приоритет</p>
             </div>
             <br />
-            <div className='about_box'>
-              <div className='info_block'>
-                <img src='/imgs/storage_photo.png' />
-                <p className='head'>Наши склады</p>
-                <p className='desc'>Сухие, современные складские помещения</p>
-              </div>
-              <BigBeam />
-              <div className='info_block'>
-                <p className='head'>Транспортировка</p>
-                <p className='desc'>Мы имеем огромный парк большегрузных автомобилей</p>
-                <img src='/imgs/transport_photo.png' />
+            <div className="flex padding_content">
+              <div className='head'>
+                <p className='header padding'>ТРЕЙДСЕРВИС - ваш надежный поставщик</p>
+                <p className='description padding'>Комплексные поставки металлопроката и электронной компонентной базы отечественного и иностранного производства</p>
+                <br />
+                <a className='hero_a' href='#products'>Спектр услуг</a>
               </div>
             </div>
           </div>
@@ -81,7 +57,8 @@ export default function Home() {
               </div>
               <div className='service_block'>
                 <ControlPanel />
-                <p className='head'>ЭКБ</p>
+                <p className='head'>ЭЛЕКТРОННАЯ КОМПОНЕНТНАЯ БАЗА (ЭКБ)</p>
+                <p className='desc'>- Отечественного и иностранного производства</p>
                 <p className='desc'>- Корпусная и узловая сборка электронных устройств</p>
               </div>
             </div>
@@ -98,13 +75,9 @@ export default function Home() {
               <Form />
             </div>
           </div>
+          <br />
           <div className='info_block'>
-              <LogoGreen />
               <p className='copyright'>© 2023 Все права защищены</p>
-              <a className='social_media' href='https://t.me/'>Соц.сети</a>
-          </div>
-          <div className='sign_block'>
-              <a className='sign' href='https://t.me/oneroodev'>Page by OnerooDev</a>
           </div>
         </div>
     </>

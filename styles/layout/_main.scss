@@ -24,27 +24,26 @@ html {
     }
     .menu {
         display: flex;
-        padding-left: 5%;
         gap: 8%;
-        width: 50%;
-        justify-content: space-around;
+        justify-content: flex-end;
         align-items: center;
-        font-size: 2.1vh;
+        font-size: 1.8vh;
         text-align: center;
         font-family: "Comfortaa";
+        font-weight: bold;
         .menu_a {
-            color: color(white);
+            color: color(black);
             cursor: pointer;
             text-decoration: none;
             transition: all 0.8s;
             &:hover {
-                color: color(dark);
+                color: color(white);
             }
             }
     }    
     .hero_a {
         font-style: bold;
-        font-size: 1.9vh;
+        font-size: 2vh;
         background-color: color(dark);
         color: color(white);
         padding: 1vh;
@@ -163,8 +162,7 @@ html {
     padding-top: 5vh;
     padding-bottom: 1vh;
     .form_block {
-        align-self: flex-end;
-        padding-right: 5%;
+        align-self: center;
         padding-bottom: 1vh;
         .form_line{
             display: flex;
@@ -321,16 +319,22 @@ html {
     max-height: 45vh;
 }
 .head {
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+
     .header {
-        color: color(white);
+        color: color(dark);
         font-style: bold;
-        font-size: 4vh;
+        font-size: 5vh;
     }
     .description {
-        padding-top: 2vh;
-        color: color(gray);
+        padding-left: 15%;
+        max-width: 70%;
+        padding-top: 3vh;
+        color: color(black);
         margin-bottom: 5vh;
-        font-size: 1.8vh;
+        font-size: 2.8vh;
     }
 }
 //
